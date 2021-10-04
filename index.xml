@@ -6,15 +6,39 @@
     <description>Recent content on Luis Uribe - blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Jul 2021 11:05:05 -0500</lastBuildDate><atom:link href="https://luisuribe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Aug 2021 18:27:47 -0500</lastBuildDate><atom:link href="https://luisuribe.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Zero</title>
-      <link>https://luisuribe.github.io/post/zero/</link>
-      <pubDate>Wed, 14 Jul 2021 11:05:05 -0500</pubDate>
+      <title>About</title>
+      <link>https://luisuribe.github.io/about/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://luisuribe.github.io/post/zero/</guid>
+      <guid>https://luisuribe.github.io/about/</guid>
       
-        <description>Initial test</description>
+        <description>Simple blog to track some of my projects
+acme at riseup dot net</description>
+      
+    </item>
+    
+    <item>
+      <title>Pwnagotchi 01</title>
+      <link>https://luisuribe.github.io/post/pwnagotchi-01/</link>
+      <pubDate>Tue, 31 Aug 2021 18:27:47 -0500</pubDate>
+      
+      <guid>https://luisuribe.github.io/post/pwnagotchi-01/</guid>
+      
+        <description>So, I decided to start with a simple (outside from confort zone) project during my &amp;ldquo;funemployment&amp;rdquo; time and found pwnagotchi on my todo list (which is quite huge).</description>
+      
+    </item>
+    
+    <item>
+      <title>Vim Setup</title>
+      <link>https://luisuribe.github.io/post/vim-setup/</link>
+      <pubDate>Wed, 14 Jul 2021 18:39:03 -0500</pubDate>
+      
+      <guid>https://luisuribe.github.io/post/vim-setup/</guid>
+      
+        <description>Simple vim configuration
+&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;set nocompatible&amp;#34; =&amp;gt; General&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34; Sets how many lines of history VIM has to rememberset history=700&amp;#34; Enable filetype pluginsfiletype plugin onfiletype indent on&amp;#34; Set to auto read when a file is changed from the outsideset autoread&amp;#34;&amp;#34;use keys for navigating between tabsnnoremap &amp;lt;C-Up&amp;gt; gTnnoremap &amp;lt;C-Down&amp;gt; gtnnoremap &amp;lt;C-n&amp;gt; :tabnext&amp;lt;CR&amp;gt;nnoremap &amp;lt;C-t&amp;gt; :tabnew&amp;lt;CR&amp;gt;nnoremap &amp;lt;C-b&amp;gt; :tabprev&amp;lt;CR&amp;gt;&amp;#34; Fast savingnmap &amp;lt;leader&amp;gt;w :w!</description>
       
     </item>
     

@@ -7,7 +7,7 @@
   <title>
     Luis Uribe
       |
-      Luis Uribe - blog
+      Vim Setup
 
 
     
@@ -56,12 +56,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <link rel="canonical" href="/" />
+  <link rel="canonical" href="/post/vim-setup/" />
 
   
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Luis Uribe - blog" />
-
-
   
   
   
@@ -84,8 +81,9 @@
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Luis Uribe - blog"/>
-<meta name="twitter:description" content="devops / will travel"/>
+<meta name="twitter:title" content="Vim Setup"/>
+<meta name="twitter:description" content="Simple vim configuration
+&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;set nocompatible&#34; =&gt; General&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34; Sets how many lines of history VIM has to rememberset history=700&#34; Enable filetype pluginsfiletype plugin onfiletype indent on&#34; Set to auto read when a file is changed from the outsideset autoread&#34;&#34;use keys for navigating between tabsnnoremap &lt;C-Up&gt; gTnnoremap &lt;C-Down&gt; gtnnoremap &lt;C-n&gt; :tabnext&lt;CR&gt;nnoremap &lt;C-t&gt; :tabnew&lt;CR&gt;nnoremap &lt;C-b&gt; :tabprev&lt;CR&gt;&#34; Fast savingnmap &lt;leader&gt;w :w!"/>
 
 
 
@@ -111,9 +109,6 @@
           
           <li>
             <a
-              
-                class="current"
-
               
               href="/"
               
@@ -238,130 +233,26 @@
 
     "
   >
-    <div class="post-title post-content">
-      
-    </div>
-
-    
-  </div>
-
-  
-
-  
-  
-    <div
-      class="post 
-        .
-
-      "
-    >
+    <div class="post-content">
       
       <div class="post-title">
-        <h3><a href="/post/pwnagotchi-01/">Pwnagotchi 01</a></h3>
-      </div>
-      <div class="post-content">
-        <div class="p_part">
-          <p>
-            
-              <p>So, I decided to start with a simple (outside from confort zone) project during my &ldquo;funemployment&rdquo; time and found pwnagotchi on my todo list (which is quite huge). After some reading I bought an rpi zero and a waveshare 2.1 display, along with one SD card. First mistake was to select the Vilros kit in amazon because it doesn&rsquo;t have the 40 pins solded. Also Amazon suggests to add the display and it ended became a v3, instead of the v2 that was on the images.</p>
-<p>Hence, as a side project, I had to soldier the pins, which was somehow easy, given my lack of expertise. And I ended with a new soldering iron and some equipment.</p>
-<figure><img src="images/IMG_1251.jpg"
-         alt="rpi zero soldering"/>
-</figure>
-
-<p>Setting up the pwnagotchi was simple, just follow the instructions, install, configure and power on. However the display didnt work, and after some googling I just found that the v3 version is not supported.</p>
-<p>The display (and soldering) was ok, I could check that it was working with the <a href="https://github.com/waveshare/e-Paper/blob/master/RaspberryPi_JetsonNano/python/examples/epd_2in13_V2_test.py">example</a> located on the github repo:</p>
-<p>Just clone the repo, and run <code>python3 epd_2in13_V2_test.py</code></p>
-<p>Later, I found some <a href="https://www.reddit.com/r/pwnagotchi/comments/ii16k6/waveshare_213_epaper_hat_v3/g34g4zt/">reddit thread</a> with instructions to use that display (copying them here, just for reference):</p>
-<p>Then:</p>
-<ul>
-<li>Use <code>&quot;waveshare213d&quot;</code> in <code>config.toml</code></li>
-<li>Modify <code>/usr/local/lib/python3.7/dist-packages/pwnagotchi/plugins/default/ups_lite.py</code></li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_ui_setup</span>(self, ui):
-        ui<span style="color:#f92672">.</span>add_element(<span style="color:#e6db74">&#39;ups&#39;</span>, LabeledValue(color<span style="color:#f92672">=</span>BLACK, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;UPS&#39;</span>, value<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0%/0V&#39;</span>, position<span style="color:#f92672">=</span>(ui<span style="color:#f92672">.</span>width() <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>),
-                                           label_font<span style="color:#f92672">=</span>fonts<span style="color:#f92672">.</span>Bold, text_font<span style="color:#f92672">=</span>fonts<span style="color:#f92672">.</span>Medium))
-</code></pre></div><ul>
-<li>Modify <code>/usr/local/lib/python3.7/dist-packages/pwnagotchi/plugins/default/memtemp.py</code></li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">on_ui_setup</span>(self, ui):
-        <span style="color:#66d9ef">if</span> ui<span style="color:#f92672">.</span>is_waveshare_v2():
-            h_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">180</span>, <span style="color:#ae81ff">80</span>)
-            v_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">180</span>, <span style="color:#ae81ff">61</span>)
-        <span style="color:#66d9ef">elif</span> ui<span style="color:#f92672">.</span>is_waveshare_v1():
-            h_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">170</span>, <span style="color:#ae81ff">80</span>)
-            v_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">170</span>, <span style="color:#ae81ff">61</span>)
-        <span style="color:#66d9ef">elif</span> ui<span style="color:#f92672">.</span>is_waveshare144lcd():
-            h_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">77</span>)
-            v_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">67</span>)
-        <span style="color:#66d9ef">elif</span> ui<span style="color:#f92672">.</span>is_inky():
-            h_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">68</span>)
-            v_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">165</span>, <span style="color:#ae81ff">54</span>)
-        <span style="color:#66d9ef">elif</span> ui<span style="color:#f92672">.</span>is_waveshare27inch():
-            h_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">192</span>, <span style="color:#ae81ff">138</span>)
-            v_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">216</span>, <span style="color:#ae81ff">122</span>)
-        <span style="color:#66d9ef">else</span>:
-            h_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">68</span>)
-            v_pos <span style="color:#f92672">=</span> (<span style="color:#ae81ff">175</span>, <span style="color:#ae81ff">54</span>)
-
-
-        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>options[<span style="color:#e6db74">&#39;orientation&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;vertical&#34;</span>:
-            ui<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#39;memtemp&#39;</span>,
-                   <span style="color:#e6db74">&#34; mem:</span><span style="color:#e6db74">%s%%</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> cpu:</span><span style="color:#e6db74">%s%%</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> temp:</span><span style="color:#e6db74">%s%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (self<span style="color:#f92672">.</span>mem_usage(), self<span style="color:#f92672">.</span>cpu_load(), temp, symbol))
-        <span style="color:#66d9ef">else</span>:
-            <span style="color:#75715e"># default to horizontal</span>
-            ui<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#39;memtemp&#39;</span>,
-                   <span style="color:#e6db74">&#34; mem cpu temp</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%s%%</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%s%%</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%s%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (self<span style="color:#f92672">.</span>mem_usage(), self<span style="color:#f92672">.</span>cpu_load(),
-
-</code></pre></div><p>And voilá</p>
-<figure><img src="images/IMG_1572.jpg"
-         alt="pwnagotchi running"/>
-</figure>
-
-
-
-
-            
-          </p>
-          </div>
-      </div>
-
-      
-      <div class="post-footer">
-        <div class="meta">
+        <h1>Vim Setup</h1>
+        
           <div class="info">
             <em class="fas fa-calendar-day"></em>
             <span class="date"
               >
-                Tue, Aug 31, 2021
+                Wed, Jul 14, 2021
 
 
               </span
             >
-            
-
-            
+            <em class="fas fa-stopwatch"></em>
+            <span class="reading-time">One-minute read</span>
           </div>
-        </div>
-      </div>
-    </div>
 
-  
-    <div
-      class="post 
-        .
-
-      "
-    >
-      
-      <div class="post-title">
-        <h3><a href="/post/vim-setup/">Vim Setup</a></h3>
-      </div>
-      <div class="post-content">
-        <div class="p_part">
-          <p>
-            
-              <p>Simple vim configuration</p>
+        
+      </div><p>Simple vim configuration</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;&#34;</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nocompatible</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; =&gt; General</span><span style="color:#960050;background-color:#1e0010">
@@ -425,36 +316,15 @@
 </span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">term</span>=<span style="color:#a6e22e">xterm</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">endif</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div>
+</span></code></pre></div></div>
+    <div class="post-footer">
+      <div class="info">
+        
 
-
-            
-          </p>
-          </div>
-      </div>
-
-      
-      <div class="post-footer">
-        <div class="meta">
-          <div class="info">
-            <em class="fas fa-calendar-day"></em>
-            <span class="date"
-              >
-                Wed, Jul 14, 2021
-
-
-              </span
-            >
-            
-
-            
-          </div>
-        </div>
+        
       </div>
     </div>
 
-  
-  <div class="pagination">
     
   </div>
 
