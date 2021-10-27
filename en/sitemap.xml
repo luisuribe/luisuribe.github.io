@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://luisuribe.github.io/about/</loc>
-    <lastmod>2021-10-03T00:00:00+00:00</lastmod>
+    <loc>https://luisuribe.github.io/post/k8s-lab-01/</loc>
+    <lastmod>2021-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://luisuribe.github.io/</loc>
-    <lastmod>2021-08-31T18:27:47-05:00</lastmod>
+    <lastmod>2021-10-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -19,7 +19,13 @@
                 />
   </url><url>
     <loc>https://luisuribe.github.io/post/</loc>
-    <lastmod>2021-08-31T18:27:47-05:00</lastmod>
+    <lastmod>2021-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://luisuribe.github.io/post/stocks-plugin-for-sopel/</loc>
+    <lastmod>2021-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://luisuribe.github.io/about/</loc>
+    <lastmod>2021-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://luisuribe.github.io/post/pwnagotchi-01/</loc>
     <lastmod>2021-08-31T18:27:47-05:00</lastmod>
