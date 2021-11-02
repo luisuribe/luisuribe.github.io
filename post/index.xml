@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Luis Uribe - blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://luisuribe.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://luisuribe.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>k8s lab 02</title>
+      <link>https://luisuribe.github.io/post/k8s-lab-02/</link>
+      <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://luisuribe.github.io/post/k8s-lab-02/</guid>
+      
+        <description>So, got a few use cases that I want to try:</description>
+      
+    </item>
+    
     <item>
       <title>k8s lab 01</title>
       <link>https://luisuribe.github.io/post/k8s-lab-01/</link>

@@ -221,13 +221,16 @@
     </ul>
   </div>
 </footer>
-  
-  <script
-    type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
-    crossorigin="anonymous"
-  ></script></div>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VY0QNZB3DG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VY0QNZB3DG');
+</script></div>
 </aside>
       <main>
         <div class="autopagerize_page_element">
@@ -248,6 +251,80 @@
   
 
   
+  
+    <div
+      class="post 
+        .
+
+      "
+    >
+      
+      <div class="post-title">
+        <h3><a href="/post/k8s-lab-02/">k8s lab 02</a></h3>
+      </div>
+      <div class="post-content">
+        <div class="p_part">
+          <p>
+            
+              <p>So, got a few use cases that I want to try:</p>
+<ul>
+<li>Configure aliases and handy stuff (autocomplete) for the terminal</li>
+<li>Deploy a new container</li>
+<li>View logs of for the deployment</li>
+<li>View logs from the container</li>
+<li>Run container as a non-root user (<a href="https://github.com/hexops/dockerfile">from some docker best practices</a>)</li>
+</ul>
+<h3 id="configure-aliases-and-handy-stuff-autocomplete-for-the-terminal">Configure aliases and handy stuff (autocomplete) for the terminal</h3>
+<p>Add this lines to <code>~/.profile</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias k<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;minikube kubectl --&#34;</span>
+set_minikube <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  eval <span style="color:#66d9ef">$(</span>minikube -p minikube docker-env<span style="color:#66d9ef">)</span>
+<span style="color:#f92672">}</span>
+source &lt;<span style="color:#f92672">(</span>k completion bash<span style="color:#f92672">)</span>
+complete -F __start_kubectl k
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#a6e22e">kdeploy</span><span style="color:#f92672">:</span>
+  minikube kubectl -- apply -f hello.yaml
+
+<span style="color:#a6e22e">kdelete</span><span style="color:#f92672">:</span>
+  minikube kubectl -- delete -f hello.yaml
+
+<span style="color:#a6e22e">kservice</span><span style="color:#f92672">:</span>
+  minikube kubectl -- expose deployment k8s-lab-deployment --type<span style="color:#f92672">=</span>LoadBalancer --port<span style="color:#f92672">=</span><span style="color:#ae81ff">5000</span>
+
+<span style="color:#a6e22e">dtag</span><span style="color:#f92672">:</span> <span style="color:#75715e"># Create new tags of docker container with: make dtag version=X
+</span><span style="color:#75715e"></span>  docker tag k8s-lab k8s-lab:<span style="color:#66d9ef">$(</span>version<span style="color:#66d9ef">)</span>
+</code></pre></div><p><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>
+wget <a href="https://github.com/mikefarah/yq/releases/download/v4.13.5/yq_linux_amd64">https://github.com/mikefarah/yq/releases/download/v4.13.5/yq_linux_amd64</a> -O /usr/bin/yq &amp;&amp;<br>
+chmod +x /usr/bin/yq</p>
+<pre><code>yq e -i '.spec.template.spec.containers[0].image = &quot;otro&quot;' hello.yaml</code></pre>
+
+
+
+            
+          </p>
+          </div>
+      </div>
+
+      
+      <div class="post-footer">
+        <div class="meta">
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Wed, Oct 27, 2021
+
+
+              </span
+            >
+            
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
   
     <div
       class="post 
@@ -667,11 +744,14 @@ kubectl expose deployment k8s-lab --type<span style="color:#f92672">=</span>Load
     </ul>
   </div>
 </footer>
-  
-  <script
-    type="text/javascript"
-    src="/js/medium-zoom.min.71100d84fab0ad794b8399a66ac810700cc78d703f715dc10af4d7ba7b761362.js"
-    integrity="sha256-cRANhPqwrXlLg5mmasgQcAzHjXA/cV3BCvTXunt2E2I="
-    crossorigin="anonymous"
-  ></script></body>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VY0QNZB3DG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VY0QNZB3DG');
+</script></body>
 </html>
