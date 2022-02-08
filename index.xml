@@ -6,18 +6,7 @@
     <description>Recent content on Luis Uribe - blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://luisuribe.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>aws technical test</title>
-      <link>https://luisuribe.github.io/post/technical-test-01/</link>
-      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://luisuribe.github.io/post/technical-test-01/</guid>
-      
-        <description>So, I&amp;rsquo;m looking for a job and have this technical test on hacker rank.</description>
-      
-    </item>
-    
+    <lastBuildDate>Wed, 27 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://luisuribe.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>k8s lab 02</title>
       <link>https://luisuribe.github.io/post/k8s-lab-02/</link>
