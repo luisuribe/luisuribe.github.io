@@ -15,7 +15,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.84.4" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.92.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta
     name="description"
     content="
@@ -87,6 +87,7 @@
 
 
   
+  <script defer data-domain="blog.luisuribe.dev" src="https://plausible.io/js/plausible.js"></script>
 </head>
 <body>
     <header><div
@@ -198,6 +199,13 @@
         </li>
 
       
+        <li>
+          <a href="https://twitter.com/luisuribe" rel="me" aria-label="twitter">
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
     </ul>
   </div><footer class="footer footer--sidebar">
   <div class="by_farbox">
@@ -206,7 +214,7 @@
         &copy;
         
           Luis Uribe
-          2021
+          2022
 
 
         
@@ -215,16 +223,7 @@
     </ul>
   </div>
 </footer>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VY0QNZB3DG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VY0QNZB3DG');
-</script></div>
+</div>
 </aside>
       <main>
         <div class="autopagerize_page_element">
@@ -258,19 +257,18 @@
 <ul>
 <li>Configure aliases and handy stuff (autocomplete) for the terminal</li>
 <li>Deploy a new container</li>
-<li>View logs of for the deployment</li>
-<li>View logs from the container</li>
-<li>Run container as a non-root user (<a href="https://github.com/hexops/dockerfile">from some docker best practices</a>)</li>
+<li>more later &hellip;</li>
 </ul>
 <h3 id="configure-aliases-and-handy-stuff-autocomplete-for-the-terminal">Configure aliases and handy stuff (autocomplete) for the terminal</h3>
-<p>Add this lines to <code>~/.profile</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias k<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;minikube kubectl --&#34;</span>
+<p>Add this lines to <code>~/.bash_profile</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias k<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;minikube kubectl --&#34;</span>
 set_minikube <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   eval <span style="color:#66d9ef">$(</span>minikube -p minikube docker-env<span style="color:#66d9ef">)</span>
 <span style="color:#f92672">}</span>
 source &lt;<span style="color:#f92672">(</span>k completion bash<span style="color:#f92672">)</span>
 complete -F __start_kubectl k
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#a6e22e">kdeploy</span><span style="color:#f92672">:</span>
+</code></pre></div><p>I have a simple Makefile for builds and deploys:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#a6e22e">kdeploy</span><span style="color:#f92672">:</span>
   minikube kubectl -- apply -f hello.yaml
 
 <span style="color:#a6e22e">kdelete</span><span style="color:#f92672">:</span>
@@ -279,13 +277,16 @@ complete -F __start_kubectl k
 <span style="color:#a6e22e">kservice</span><span style="color:#f92672">:</span>
   minikube kubectl -- expose deployment k8s-lab-deployment --type<span style="color:#f92672">=</span>LoadBalancer --port<span style="color:#f92672">=</span><span style="color:#ae81ff">5000</span>
 
-<span style="color:#a6e22e">dtag</span><span style="color:#f92672">:</span> <span style="color:#75715e"># Create new tags of docker container with: make dtag version=X
-</span><span style="color:#75715e"></span>  docker tag k8s-lab k8s-lab:<span style="color:#66d9ef">$(</span>version<span style="color:#66d9ef">)</span>
-</code></pre></div><p><a href="https://github.com/mikefarah/yq">https://github.com/mikefarah/yq</a>
-wget <a href="https://github.com/mikefarah/yq/releases/download/v4.13.5/yq_linux_amd64">https://github.com/mikefarah/yq/releases/download/v4.13.5/yq_linux_amd64</a> -O /usr/bin/yq &amp;&amp;<br>
-chmod +x /usr/bin/yq</p>
-<pre><code>yq e -i '.spec.template.spec.containers[0].image = &quot;otro&quot;' hello.yaml</code></pre>
-</div>
+<span style="color:#a6e22e">release</span><span style="color:#f92672">:</span> build
+  docker tag k8s-lab k8s-lab:<span style="color:#66d9ef">$(</span>version<span style="color:#66d9ef">)</span>
+  <span style="color:#75715e"># something to </span>
+  yq e -i <span style="color:#e6db74">&#39;.spec.template.spec.containers[0].image = &#34;k8s-lab:$(version)&#34;&#39;</span> hello.yaml
+
+<span style="color:#a6e22e">deploy</span><span style="color:#f92672">:</span> release kdeploy
+</code></pre></div><p>So i can deploy with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make release version<span style="color:#f92672">=</span>X
+
+</code></pre></div></div>
     <div class="post-footer">
       <div class="info">
         
@@ -308,7 +309,7 @@ chmod +x /usr/bin/yq</p>
         &copy;
         
           Luis Uribe
-          2021
+          2022
 
 
         
@@ -317,14 +318,5 @@ chmod +x /usr/bin/yq</p>
     </ul>
   </div>
 </footer>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VY0QNZB3DG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VY0QNZB3DG');
-</script></body>
+</body>
 </html>
