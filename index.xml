@@ -6,7 +6,18 @@
     <description>Recent content on Luis Uribe - blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://luisuribe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Feb 2022 08:00:00 -0500</lastBuildDate><atom:link href="https://luisuribe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pwnagotchi 02 - Linux tools</title>
+      <link>https://luisuribe.github.io/post/pwnagotchi-02/</link>
+      <pubDate>Thu, 24 Feb 2022 08:00:00 -0500</pubDate>
+      
+      <guid>https://luisuribe.github.io/post/pwnagotchi-02/</guid>
+      
+        <description>Based on https://github.com/mtagius/pwnagotchi-tools I wrote some scripts to use pwnagetty and generate scripts for linux.</description>
+      
+    </item>
+    
     <item>
       <title>k8s lab 02</title>
       <link>https://luisuribe.github.io/post/k8s-lab-02/</link>

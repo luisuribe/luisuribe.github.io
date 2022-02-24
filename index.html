@@ -259,6 +259,57 @@
     >
       
       <div class="post-title">
+        <h3><a href="/post/pwnagotchi-02/">Pwnagotchi 02 - Linux tools</a></h3>
+      </div>
+      <div class="post-content">
+        <div class="p_part">
+          <p>
+            
+              <p>Based on <a href="https://github.com/mtagius/pwnagotchi-tools">https://github.com/mtagius/pwnagotchi-tools</a> I wrote some scripts to use pwnagetty and generate scripts for linux. Plan is to use it on an EC2 instance (once AWS allows me)</p>
+<p>First I download all the handsakes, create a docker container to use pwnagetty and then generate the hashcat scripts</p>
+<p>Steps:</p>
+<pre tabindex="0"><code>./01_get_caps.sh # assuming yout pwnagotchi is on 10.0.0.2
+make build; make pwnagetty
+./02_generate-hashcat-scripts.py
+</code></pre><p>Then copy your <code>handshakes/</code> dir to <code>/handshakes</code> to the ec2 instance and run any script from <code>/handshakes/scripts/</code>. Don&rsquo;t forget to use <code>/opt/hashcat</code> as your hashcat dir.</p>
+<p>Repo is here: <a href="https://github.com/luisuribe/pwnagotchi-tools-linux">https://github.com/luisuribe/pwnagotchi-tools-linux</a></p>
+
+
+
+            
+          </p>
+          </div>
+      </div>
+
+      
+      <div class="post-footer">
+        <div class="meta">
+          <div class="info">
+            <em class="fas fa-calendar-day"></em>
+            <span class="date"
+              >
+                Thu, Feb 24, 2022
+
+
+              </span
+            >
+            
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div
+      class="post 
+        .
+
+      "
+    >
+      
+      <div class="post-title">
         <h3><a href="/post/k8s-lab-02/">k8s lab 02</a></h3>
       </div>
       <div class="post-content">
