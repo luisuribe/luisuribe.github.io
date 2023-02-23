@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://luisuribe.github.io/post/k8s-lab-02/</loc>
+    <lastmod>2022-02-08T08:45:46-05:00</lastmod>
+  </url><url>
     <loc>https://luisuribe.github.io/</loc>
-    <lastmod>2022-02-24T08:00:00-05:00</lastmod>
+    <lastmod>2022-02-08T08:45:46-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -16,28 +19,25 @@
                 />
   </url><url>
     <loc>https://luisuribe.github.io/post/</loc>
-    <lastmod>2022-02-24T08:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://luisuribe.github.io/post/pwnagotchi-02/</loc>
-    <lastmod>2022-02-24T08:00:00-05:00</lastmod>
-  </url><url>
-    <loc>https://luisuribe.github.io/post/k8s-lab-02/</loc>
-    <lastmod>2021-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-08T08:45:46-05:00</lastmod>
   </url><url>
     <loc>https://luisuribe.github.io/post/k8s-lab-01/</loc>
-    <lastmod>2021-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-27T09:00:11-05:00</lastmod>
   </url><url>
     <loc>https://luisuribe.github.io/post/stocks-plugin-for-sopel/</loc>
-    <lastmod>2021-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-15T17:21:36-05:00</lastmod>
   </url><url>
     <loc>https://luisuribe.github.io/about/</loc>
-    <lastmod>2021-10-03T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-23T14:54:32+01:00</lastmod>
+  </url><url>
+    <loc>https://luisuribe.github.io/labs/</loc>
+    <lastmod>2023-02-23T14:54:32+01:00</lastmod>
   </url><url>
     <loc>https://luisuribe.github.io/post/pwnagotchi-01/</loc>
-    <lastmod>2021-08-31T18:27:47-05:00</lastmod>
+    <lastmod>2021-11-02T11:25:32-05:00</lastmod>
   </url><url>
     <loc>https://luisuribe.github.io/post/vim-setup/</loc>
-    <lastmod>2021-07-14T18:39:03-05:00</lastmod>
+    <lastmod>2021-10-03T19:47:36-05:00</lastmod>
   </url><url>
     <loc>https://luisuribe.github.io/categories/</loc>
     <xhtml:link

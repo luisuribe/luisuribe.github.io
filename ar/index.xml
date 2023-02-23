@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Luis Uribe - blog</title>
+    <title>luisuribe</title>
     <link>https://luisuribe.github.io/ar/</link>
-    <description>Recent content on Luis Uribe - blog</description>
+    <description>Recent content on luisuribe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://luisuribe.github.io/ar/index.xml" rel="self" type="application/rss+xml" />
   </channel>
