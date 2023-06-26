@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on luisuribe</title>
-    <link>https://luisuribe.github.io/tags/</link>
+    <link>https://4cm3.dev/tags/</link>
     <description>Recent content in Tags on luisuribe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://luisuribe.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://4cm3.dev/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

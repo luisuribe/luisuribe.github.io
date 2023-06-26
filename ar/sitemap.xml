@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://luisuribe.github.io/ar/categories/</loc>
+    <loc>https://4cm3.dev/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://luisuribe.github.io/categories/"
+                href="https://4cm3.dev/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://luisuribe.github.io/ar/categories/"
+                href="https://4cm3.dev/ar/categories/"
                 />
   </url><url>
-    <loc>https://luisuribe.github.io/ar/</loc>
+    <loc>https://4cm3.dev/ar/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://luisuribe.github.io/"
+                href="https://4cm3.dev/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://luisuribe.github.io/ar/"
+                href="https://4cm3.dev/ar/"
                 />
   </url><url>
-    <loc>https://luisuribe.github.io/ar/tags/</loc>
+    <loc>https://4cm3.dev/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://luisuribe.github.io/tags/"
+                href="https://4cm3.dev/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://luisuribe.github.io/ar/tags/"
+                href="https://4cm3.dev/ar/tags/"
                 />
   </url>
 </urlset>

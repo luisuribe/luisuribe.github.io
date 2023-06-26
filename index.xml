@@ -2,73 +2,82 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>luisuribe</title>
-    <link>https://luisuribe.github.io/</link>
+    <link>https://4cm3.dev/</link>
     <description>Recent content on luisuribe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://luisuribe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://4cm3.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Playing with videos</title>
+      <link>https://4cm3.dev/post/playing_with_videos/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://4cm3.dev/post/playing_with_videos/</guid>
+      <description>A cheatsheet on how to merge/convert timelapse videos from iPhone:</description>
+    </item>
+    
     <item>
       <title>k8s lab 02</title>
-      <link>https://luisuribe.github.io/post/k8s-lab-02/</link>
+      <link>https://4cm3.dev/post/k8s-lab-02/</link>
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://luisuribe.github.io/post/k8s-lab-02/</guid>
+      <guid>https://4cm3.dev/post/k8s-lab-02/</guid>
       <description>So, got a few use cases that I want to try:</description>
     </item>
     
     <item>
       <title>k8s lab 01</title>
-      <link>https://luisuribe.github.io/post/k8s-lab-01/</link>
+      <link>https://4cm3.dev/post/k8s-lab-01/</link>
       <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://luisuribe.github.io/post/k8s-lab-01/</guid>
+      <guid>https://4cm3.dev/post/k8s-lab-01/</guid>
       <description>Another day, another lab, this time something with k8s. I haven&amp;rsquo;t done anything with it, just some hello-world examples and the ocassional ranting of &amp;ldquo;we don&amp;rsquo;t need this here&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Stocks plugin for sopel</title>
-      <link>https://luisuribe.github.io/post/stocks-plugin-for-sopel/</link>
+      <link>https://4cm3.dev/post/stocks-plugin-for-sopel/</link>
       <pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://luisuribe.github.io/post/stocks-plugin-for-sopel/</guid>
+      <guid>https://4cm3.dev/post/stocks-plugin-for-sopel/</guid>
       <description>Good ol&amp;rsquo; irc is the best way to keep in contact with my friends, since &amp;lsquo;98 or around.</description>
     </item>
     
     <item>
       <title>about this</title>
-      <link>https://luisuribe.github.io/about/</link>
+      <link>https://4cm3.dev/about/</link>
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://luisuribe.github.io/about/</guid>
+      <guid>https://4cm3.dev/about/</guid>
       <description>a place to put my stuff on the interwebs
 acme at riseup dot net</description>
     </item>
     
     <item>
       <title>labs</title>
-      <link>https://luisuribe.github.io/labs/</link>
+      <link>https://4cm3.dev/labs/</link>
       <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://luisuribe.github.io/labs/</guid>
+      <guid>https://4cm3.dev/labs/</guid>
       <description>code and stuff
 hoyesfestivo.co </description>
     </item>
     
     <item>
       <title>Pwnagotchi 01</title>
-      <link>https://luisuribe.github.io/post/pwnagotchi-01/</link>
+      <link>https://4cm3.dev/post/pwnagotchi-01/</link>
       <pubDate>Tue, 31 Aug 2021 18:27:47 -0500</pubDate>
       
-      <guid>https://luisuribe.github.io/post/pwnagotchi-01/</guid>
+      <guid>https://4cm3.dev/post/pwnagotchi-01/</guid>
       <description>So, I decided to start with a simple (outside from comfort zone) project during my &amp;ldquo;funemployment&amp;rdquo; time and found pwnagotchi on my todo list (which is quite huge).</description>
     </item>
     
     <item>
       <title>Vim Setup</title>
-      <link>https://luisuribe.github.io/post/vim-setup/</link>
+      <link>https://4cm3.dev/post/vim-setup/</link>
       <pubDate>Wed, 14 Jul 2021 18:39:03 -0500</pubDate>
       
-      <guid>https://luisuribe.github.io/post/vim-setup/</guid>
+      <guid>https://4cm3.dev/post/vim-setup/</guid>
       <description>Simple vim configuration
 &amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34; set nocompatible &amp;#34; =&amp;gt; General &amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34; &amp;#34; Sets how many lines of history VIM has to remember set history=700 &amp;#34; Enable filetype plugins filetype plugin on filetype indent on &amp;#34; Set to auto read when a file is changed from the outside set autoread &amp;#34;&amp;#34;use keys for navigating between tabs nnoremap &amp;lt;C-Up&amp;gt; gT nnoremap &amp;lt;C-Down&amp;gt; gt nnoremap &amp;lt;C-n&amp;gt; :tabnext&amp;lt;CR&amp;gt; nnoremap &amp;lt;C-t&amp;gt; :tabnew&amp;lt;CR&amp;gt; nnoremap &amp;lt;C-b&amp;gt; :tabprev&amp;lt;CR&amp;gt; &amp;#34; Fast saving nmap &amp;lt;leader&amp;gt;w :w!</description>
     </item>

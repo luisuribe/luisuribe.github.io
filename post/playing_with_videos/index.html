@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:title" content="Playing with videos" />
+<meta property="og:description" content="A cheatsheet on how to merge/convert timelapse videos from iPhone:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://4cm3.dev/post/playing_with_videos/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-06-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-06-26T10:08:40-05:00" /><meta property="og:site_name" content="Luis Uribe - blog" />
+
+  <meta itemprop="name" content="Playing with videos">
+<meta itemprop="description" content="A cheatsheet on how to merge/convert timelapse videos from iPhone:"><meta itemprop="datePublished" content="2023-06-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-06-26T10:08:40-05:00" />
+<meta itemprop="wordCount" content="331">
+<meta itemprop="keywords" content="" />
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Playing with videos"/>
+<meta name="twitter:description" content="A cheatsheet on how to merge/convert timelapse videos from iPhone:"/>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+    Playing with videos
+    
+  </title>
+  <link rel="stylesheet" href='https://4cm3.dev/css/site.min.css'>
+  <link rel="canonical" href="https://4cm3.dev/post/playing_with_videos/">
+  <link rel="alternate" type="application/rss&#43;xml" href="https://4cm3.dev/index.xml" title="luisuribe">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <meta name="author" content="Luis Uribe">
+  <meta name="description" content="A cheatsheet on how to merge/convert timelapse videos from iPhone:">
+</head>
+<body><nav class="navbar is-transparent " role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://4cm3.dev/">
+      <figure class="image">
+        <img alt="" class="is-rounded" src="https://www.gravatar.com/avatar/cd3838fa3b53b8d704cf08209f4a62e1?s=128&d=identicon">
+      </figure>
+    </a>
+    <a class="navbar-item" href="https://4cm3.dev/">
+      luisuribe
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item" href="/" rel="noopener" target="_blank">
+        blog
+      </a>
+      <a class="navbar-item" href="/labs" rel="noopener" target="_blank">
+        labs
+      </a>
+      <a class="navbar-item" href="/about" rel="noopener" target="_blank">
+        about
+      </a>
+
+      
+      <a class="navbar-item" href="https://github.com/luisuribe/" rel="noopener" target="_blank">
+        <span class="icon">
+          
+            <img alt="icons/svg/github.svg" src='https://4cm3.dev/icons/svg/github.svg'>
+          
+        </span>
+      </a>
+      
+      <a class="navbar-item" href="https://gitlab.com/luisuribe/" rel="noopener" target="_blank">
+        <span class="icon">
+          
+            <img alt="icons/svg/gitlab.svg" src='https://4cm3.dev/icons/svg/gitlab.svg'>
+          
+        </span>
+      </a>
+      
+      <a class="navbar-item" href="https://www.linkedin.com/in/luribe/" rel="noopener" target="_blank">
+        <span class="icon">
+          
+            <img alt="icons/svg/linkedin.svg" src='https://4cm3.dev/icons/svg/linkedin.svg'>
+          
+        </span>
+      </a>
+      
+      <a class="navbar-item" href="https://4cm3.dev/index.xml" target="_blank">
+        <span class="icon">
+          <img alt="rss" src='https://4cm3.dev/icons/svg/rss.svg'>
+        </span>
+      </a>
+      
+    </div>
+  </div>
+</nav>
+
+  <section>
+    <section class='hero is-small is-info is-fullwidth'>
+      <div class="hero-body">
+<div class="container">
+  <h1 class="title">
+    Playing with videos
+  </h1>
+  <h2 class="subtitle">
+    <time datetime='2023-06-23T00:00:00Z'>
+      June 23, 2023
+    </time>
+    
+  </h2>
+</div>
+
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+<div class="content is-medium">
+  <p>A cheatsheet on how to merge/convert timelapse videos from iPhone:</p>
+<p>First, I tried to use images and .mov videos:</p>
+<pre tabindex="0"><code># Convert images to mov. Requirements: imagemagick and ffmpeg
+$ for f in *.HEIC; do magick $f -quality 100% $f.jpg; done 
+# The &#39;-t 2&#39; means the video vill have 2 secs
+$ for f in *.jpg; do ffmpeg -loop 1 -i $f -c:v libx264 -t 2 -pix_fmt yuv420p $f.MOV; done 
+</code></pre><p>Creating one single file, made of multiple videos:</p>
+<pre tabindex="0"><code>$ for f in *MOV; do echo &#34;file &#39;$f&#39;&#34; &gt;&gt; mylist.txt; done
+$ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mov
+</code></pre><p>However it fails with:</p>
+<pre tabindex="0"><code>[mov @ 0x123f05ba0] Non-monotonous DTS in output stream 0:0; previous: 15029353, current: 2308768; changing to 15029354. This may result in incorrect timestamps in the output file.
+</code></pre><p>According to SO,  it&rsquo;s related to the different configurations/formats of your input files, like fps (<a href="https://superuser.com/questions/1730350/i-want-to-concatenate-two-mp4-files-but-ffmpeg-shows-an-error-all-over/1748092#1748092">link to answer</a>). After some tests, 30fps seems a good number:</p>
+<pre tabindex="0"><code>$ rm output.mov
+$ for f in *MOV; do ffmpeg -y -i $f -vf &#34;setpts=1.25*PTS&#34; -r 30 std_$f ; done
+$ rm mylist.txt ; for f in std*MOV; do echo &#34;file &#39;$f&#39;&#34; &gt;&gt; mylist.txt; done
+$ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mov
+</code></pre><p>Images broke the video because of the different resolution, 3024x4032 vs 1080x1920. Hence a new param is needed: <code>-vf scale=1080x1920</code></p>
+<pre tabindex="0"><code>$ for f in *.jpg; do ffmpeg -loop 1 -i $f -c:v libx264 -t 1 -pix_fmt yuv420p -vf scale=1080x1920 $f.MOV; done 
+</code></pre><p>At the end, the images doesn&rsquo;t feel so &ldquo;smooth&rdquo; so I delete them. Now I want to have short videos or remove parts of them.</p>
+<p>To check duration of each video:</p>
+<pre tabindex="0"><code>$ for f in *.MOV; do echo -n $f &#39; &#39; ; ffprobe -i $f -show_format -v quiet | grep duration; done
+</code></pre><p>And to cut parts of the video</p>
+<pre tabindex="0"><code># -ss 2 starts after 2 seconds
+# -t 4 copy the next 4 seconds
+ffmpeg -ss 2 -i &#34;IMG_3930.MOV&#34; -t 4 -c copy IMG_3930_NEW.MOV
+</code></pre><p>and voilá:</p>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/839741139?h=f272fda5c8" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+
+      </div>
+    </section>
+  </section><footer class="footer">
+
+
+  <div class="content has-text-centered">
+    <p>
+      Last modified Jun 26, 2023 | template based on <a href="https://github.com/orf/bare-hugo-theme" target="_blank">Bare Hugo theme.</a>
+    </p>
+
+  </div>
+</footer></body>
+</html>
